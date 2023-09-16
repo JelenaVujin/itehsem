@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Workout extends Model
 {
     use HasFactory;
+    protected $guarded=['id'];
+    protected $fillable=['duration','description'];
 }
