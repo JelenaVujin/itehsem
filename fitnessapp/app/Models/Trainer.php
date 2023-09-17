@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Trainer extends Model
 {
     use HasFactory;
-    protected $fillable=['name','licence_number','email','phone_number' ];
-    protected $guarded=['id'];
+    public function workouts(){
+        return $this->hasMany(Workout::class);
+    }
 }
