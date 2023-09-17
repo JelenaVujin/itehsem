@@ -18,4 +18,7 @@ class Workout extends Model
     public function workoutType(){
         return $this->belongsTo(WorkoutType::class);
     }
+    public function member(){
+        return $this->belongsTo(Member::class);
+    }
 }

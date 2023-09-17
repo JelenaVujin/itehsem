@@ -4,6 +4,7 @@ namespace Database\Seeders;
 use App\Models\Trainer;
 use App\Models\Workout;
 use App\Models\User;
+use App\Models\Member;
 use App\Models\WorkoutType;
 use Illuminate\Database\Seeder;
 
@@ -18,8 +19,10 @@ class DatabaseSeeder extends Seeder
     {   
         Workout::truncate();
         Trainer::truncate();
+        Member::truncate();
         User::truncate();
         WorkoutType::truncate();
+        Member::insert(['name'=>'pera','phone_number'=>2345,'email'=>'mem@gmail.com','password'=>bcrypt('1234')]);
         User::insert(['username'=>'maja','email'=>'maja@gnauk.com','password'=>bcrypt('123')]);
         Trainer::insert(['name'=>'jel','licence_number'=>123,'email'=>'jel@gmail.com']);
         WorkoutType::insert(['type'=>'cardio']);

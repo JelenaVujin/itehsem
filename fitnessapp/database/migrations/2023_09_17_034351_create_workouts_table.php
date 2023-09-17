@@ -20,6 +20,7 @@ class CreateWorkoutsTable extends Migration
             $table->foreignId('trainer_id');
             $table->foreignId('user_id')->default();
             $table->foreignId('workout_type_id')->default();
+            $table->foreignId('member_id')->default();
             $table->timestamps();
         });
     }
