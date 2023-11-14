@@ -21,7 +21,7 @@ class WorkoutResource extends JsonResource
             'duration'=>$this->resource->duration,
             'description'=>$this->resource->description,
             'trainer'=>new TrainerResource($this->resource->trainer),
-            'member'=>new MemberResource($this->resource->member),
+           
             'user'=>new UserResource($this->resource->user),
             'workout_type'=>new WorkoutTypeResource($this->resource->workoutType)
         ];
